@@ -1,0 +1,21 @@
+{
+  "name": "InstaImageDownload",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Download largest image from Instagram Popup Dialog",
+  "browser_action": {
+    "default_title": "Download Instagram Popup Image",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "background",
+    "unlimitedStorage",
+    "downloads"
+  ]
+}
