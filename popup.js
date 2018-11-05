@@ -104,10 +104,14 @@ function downloadList() {
             });
           })
         
+          let zipName = document.getElementById('txtZipName').value;
+          if (zipName !== '') 
+            zipName += '_';
+
           Promise.all(requests).then(() => {
             zip.generateAsync({ type: "blob" }).then(function (content) {
               // see FileSaver.js
-              saveAs(content, new Date().toISOString() + ".zip");
+              saveAs(content, zipName + new Date().toISOString() + ".zip");
             });
           });
         }
